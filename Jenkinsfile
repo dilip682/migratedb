@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Get Detail') {
       steps {
-        echo 'Get DB Details'
+        echo '"Customer Name: ${params.CUST_NAME}"'
       }
     }
   }
@@ -17,7 +17,7 @@ pipeline {
 abc
 xyz
 aaa''', description: 'Enter Customer name ?')
-        choice(name: 'LIFE_CYCLE', choices: '''dev
+    choice(name: 'LIFE_CYCLE', choices: '''dev
 tst
 stg
 uat''', description: 'Enter Life cycle name ?')
