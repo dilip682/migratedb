@@ -9,6 +9,9 @@ pipeline {
     stage('Get Detail') {
       steps {
         echo '"Customer Name: ${params.CUST_NAME}"'
+        echo "Customer Name: ${params.CUST_NAME}"
+        echo "Artifact Filename: ${params.SFTP_FILE_PATH}"
+        echo "Start Job?: ${params.START_JOB}"
       }
     }
   }
